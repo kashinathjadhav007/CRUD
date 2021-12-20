@@ -25,7 +25,7 @@ var app = new function()
   };
 
   
-  this.FetchAll = function() 
+  this.Fetchdata = function() 
   {
     var data = '';
 
@@ -53,7 +53,7 @@ var app = new function()
 
       this.names.push(nname);
       el.value = '';
-      this.FetchAll();
+      this.Fetchdata();
     }
   };
 
@@ -71,7 +71,8 @@ var app = new function()
       if (nname) 
       {
         self.names.splice(item, 1,nname.trim());
-        self.FetchAll();
+        self.Fetchdata();
+
        
       }
     }
@@ -81,9 +82,9 @@ var app = new function()
   this.Delete = function (item) 
   {
     this.names.splice(item, 1);
-    this.FetchAll();
+    this.Fetchdata();
   };
   
 }
 
-app.FetchAll();
+app.Fetchdata();
